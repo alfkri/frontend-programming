@@ -134,9 +134,9 @@ function AddMovie(props){
                             <label className={styles.addmovie__formlabel}>Tipe</label>
                             <select className={styles.addmovie__forminput} id="tipe" value={tipe} onChange={handleTipe}>
                                 <option>--Choose here--</option>
-                                <option value="Action">Movie</option>
-                                <option value="Action">Series</option>
-                                <option value="Action">Animation</option>
+                                <option value="movie">Movie</option>
+                                <option value="series">Series</option>
+                                <option value="animation">Animation</option>
                             </select>
                         </div>
                         <div className={styles.addmovie__form}>
