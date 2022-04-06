@@ -19,15 +19,11 @@
     border-radius: 25px;
 }
 
-.addmovie__formtitle{
+.addmovie__formlabel{
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.addmovie__formyear{
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
 
 .addmovie__forminput{
     margin-bottom: 1rem;
