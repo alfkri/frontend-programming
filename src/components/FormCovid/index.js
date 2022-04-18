@@ -24,13 +24,13 @@ function FormCovid(props){
         setJumlah(e.target.value);
     }
 
-    //Membuat state jika title empty
+    //Membuat state jika provinisi empty
     const [isProvinsiEmpty, setProvinsiEmpty] = useState(false);
 
-    //Membuat state jika date empty
+    //Membuat state jika status empty
     const [isStatusEmpty, setStatusEmpty] = useState(false);
 
-    //Membuat state jika poster empty
+    //Membuat state jika jumlah empty
     const [isJumlahEmpty, setJumlahEmpty] = useState(false);
 
     function handleSubmit(e){
