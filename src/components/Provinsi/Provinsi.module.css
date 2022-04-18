@@ -1,0 +1,53 @@
+.container {
+    padding: 2rem 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+  
+.provinsi {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.provinsi__title{
+    line-height: 70%;
+}
+
+.provinsi__title h2{
+    color: #06D6A0;
+    font-size: 40px;
+}
+
+.provinsi__title p{
+    color: #118AB2;
+    font-size: 20px;
+}
+  
+.provinsi__content {
+    overflow-x: auto;
+}
+  
+.provinsi__table {
+    margin: 2rem auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.provinsi__table th{
+    color: #06D6A0;
+}
+
+.provinsi__table td{
+    color: #118AB2;
+}
+  
+  .provinsi__table th,
+  td {
+    padding: 2rem 0;
+    border-color: #118AB2;
+    border-style: solid;
+    border-width: 1px;
+}
+  

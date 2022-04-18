@@ -1,0 +1,34 @@
+.card {
+    background-color: #06D6A0;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 7px 10px rgb(80, 80, 80);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card h4{
+    font-size: 25px;
+}
+
+.card h2{
+    font-size: 35px;
+}
+
+.card:nth-child(1) h2 {
+    color: #b40012;
+}
+
+.card:nth-child(2) h2 {
+    color: #38b000;
+}
+
+  .card:nth-child(3) h2 {
+    color: #5c677d;
+}
+
+@media (min-width: 768px) {
+    .card{
+        width: 100%;
+    }
+}

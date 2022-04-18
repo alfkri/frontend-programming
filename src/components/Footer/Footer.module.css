@@ -1,0 +1,43 @@
+/* Small Screen */
+.container {
+    background-color: #06D6A0;
+    padding: 1rem;
+    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+}    
+
+.footer__left{
+    line-height: 80%;
+    padding: 1rem;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.footer__item{
+    margin-bottom: 1rem;
+}
+
+/* Medium Screen */
+@media (min-width: 768px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container{
+        padding: 0 5rem;
+    }
+
+    .footer__list{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer__item{
+        margin: 0 1rem;
+    }
+}
