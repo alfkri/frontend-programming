@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Alert from "../Alert";
 import styles from "./FormCovid.module.css";
+
 
 function FormCovid(props){
     const {data_prov,setData_Prov} = props;
@@ -22,23 +24,47 @@ function FormCovid(props){
         setJumlah(e.target.value);
     }
 
+    //Membuat state jika title empty
+    const [isProvinsiEmpty, setProvinsiEmpty] = useState(false);
+
+    //Membuat state jika date empty
+    const [isStatusEmpty, setStatusEmpty] = useState(false);
+
+    //Membuat state jika poster empty
+    const [isJumlahEmpty, setJumlahEmpty] = useState(false);
+
     function handleSubmit(e){
         e.preventDefault();
-
-        const dataprov = {
-            provinsi: provinsi,
-            status: status,
-            jumlah: jumlah 
+        
+        if (provinsi == ""){
+            setProvinsiEmpty(true);
         }
-        setData_Prov([...data_prov]);
-
-        console.log(dataprov);
+        else if (status == ""){
+            setProvinsiEmpty(false);
+            setStatusEmpty(true);
+        }
+        else if(jumlah == ""){
+            setProvinsiEmpty(false);
+            setStatusEmpty(false);
+            setJumlahEmpty(true);
+        }
+        else{
+            const dataprov = {
+                provinsi: provinsi,
+                status: status,
+                jumlah: jumlah 
+            }
+            setData_Prov([...data_prov]);
     
-        const find_kota = data_prov.findIndex((kota => kota.kota === provinsi));
+            console.log(dataprov);
+        
+            const find_kota = data_prov.findIndex((kota => kota.kota === provinsi));
+    
+            data_prov[find_kota][status] = jumlah;
+    
+            console.log("Setelah update: ", data_prov[find_kota]);
+        }
 
-        data_prov[find_kota][status] = jumlah;
-
-        console.log("Setelah update: ", data_prov[find_kota]);
     }
 
 
@@ -61,6 +87,9 @@ function FormCovid(props){
                                     })
                                 }
                             </select>
+                            {
+                                isProvinsiEmpty && <Alert>Provinsi wajib diisi</Alert>
+                            }
                         </div>
                         <div className={styles.covid__form}>
                             <label className={styles.covid__formlabel}>Status</label>
@@ -71,10 +100,16 @@ function FormCovid(props){
                                 <option value="dirawat">Dirawat</option>
                                 <option value="meninggal">Meninggal</option>      
                             </select>
+                            {
+                                isStatusEmpty && <Alert>Status wajib diisi</Alert>
+                            }
                         </div>
                         <div className={styles.covid__form}>
                             <label className={styles.covid__formlabel}>Jumlah</label>
                             <input className={styles.covid__forminput} type="number" onChange={handleJumlah}/>
+                            {
+                                isJumlahEmpty && <Alert>Jumlah wajib diisi</Alert>
+                            }
                         </div>
                         <button className={styles.covid__button}>Submit</button>
                     </form>

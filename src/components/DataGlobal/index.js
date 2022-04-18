@@ -6,7 +6,7 @@ function DataGlobal(props){
     return (
         <div className={styles.card}>
             <h4>{data_ind.status}</h4>
-            <h2>{data_ind.total}</h2>
+            <h2>{data_ind.total.toLocaleString()}</h2>
         </div>
     );
 }
