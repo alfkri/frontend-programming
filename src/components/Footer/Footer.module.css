@@ -1,0 +1,15 @@
+/* Small Screen */
+.container {
+    background-color: black;
+    padding: 1rem;
+    color: #E50914;
+    text-align: center;
+}
+
+.footer__title{
+    margin-bottom: 1rem;
+}
+
+.footer__author{
+    margin-bottom: 1rem;
+}
