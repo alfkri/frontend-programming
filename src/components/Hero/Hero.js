@@ -14,6 +14,7 @@ function Hero() {
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
   const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
   
+  
 
   /* async function fetchMovie() {
     const response = await fetch(
@@ -29,8 +30,9 @@ function Hero() {
 
   //mendapatkan 1 data dari trending movies
   async function getTrendingMovies(){
-    const response = await axios(ENDPOINTS.TRENDING);
-    return response.data.results[2];
+    const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
+    const response = await axios(URL);
+    return response.data.results[0];
   }
 
   //membuat fungsi untuk mendapatkan detail movie
