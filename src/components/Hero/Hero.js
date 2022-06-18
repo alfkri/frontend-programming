@@ -18,8 +18,8 @@ function Hero() {
 
   //mendapatkan 1 data dari trending movies
   async function getTrendingMovies(){
-    const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
-    const response = await axios(URL);
+//     const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
+    const response = await axios(ENDPOINTS.TRENDING);
     return response.data.results[0];
   }
 
@@ -31,7 +31,7 @@ function Hero() {
 
     // Fetch detail movie berdasarkan id
     console.log(API_KEY);
-    const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`;
+    const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=303ee6297bf6c92a68bd6c6ce6d6a690&append_to_response=videos`;
     const response = await axios(URL);
    
     setMovie(response.data);
