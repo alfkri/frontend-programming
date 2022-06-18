@@ -13,7 +13,7 @@ function Hero() {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
   const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
-  console.log(API_KEY);
+
   
 
   /* async function fetchMovie() {
@@ -47,6 +47,7 @@ function Hero() {
    
 
     setMovie(response.data);
+    console.log(API_KEY);
   }
   
 
