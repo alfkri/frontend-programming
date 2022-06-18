@@ -14,18 +14,6 @@ function Hero() {
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
   const trailer = movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
 
-  
-
-  /* async function fetchMovie() {
-    const response = await fetch(
-      "https://www.omdbapi.com/?apikey=fcf50ae6&i=tt2975590"
-    );
-
-    const data = await response.json();
-
-    setMovie(data);
-  } */
-
   useEffect(getDetailMovie, []);
 
   //mendapatkan 1 data dari trending movies
@@ -46,7 +34,6 @@ function Hero() {
     const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`;
     const response = await axios(URL);
    
-
     setMovie(response.data);
     
   }
