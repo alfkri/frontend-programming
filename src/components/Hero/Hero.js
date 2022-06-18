@@ -37,6 +37,7 @@ function Hero() {
 
   //membuat fungsi untuk mendapatkan detail movie
   async function getDetailMovie(){
+    console.log(API_KEY);
     // Ambil 1 data trending movie, lalu ambil id-nya
     const trendingMovie = await getTrendingMovies();
     const id = trendingMovie.id;
@@ -47,7 +48,7 @@ function Hero() {
    
 
     setMovie(response.data);
-    console.log(API_KEY);
+    
   }
   
 
