@@ -25,12 +25,12 @@ function Hero() {
 
   //membuat fungsi untuk mendapatkan detail movie
   async function getDetailMovie(){
-    console.log(API_KEY);
     // Ambil 1 data trending movie, lalu ambil id-nya
     const trendingMovie = await getTrendingMovies();
     const id = trendingMovie.id;
 
     // Fetch detail movie berdasarkan id
+    console.log(API_KEY);
     const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`;
     const response = await axios(URL);
    
