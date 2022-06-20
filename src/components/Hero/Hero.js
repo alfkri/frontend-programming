@@ -30,8 +30,8 @@ function Hero() {
     const id = trendingMovie.id;
 
     // Fetch detail movie berdasarkan id
-    const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=303ee6297bf6c92a68bd6c6ce6d6a690&append_to_response=videos`;
-    const response = await axios(URL);
+//     const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=303ee6297bf6c92a68bd6c6ce6d6a690&append_to_response=videos`;
+    const response = await axios(ENDPOINTS.DETAIL(id));
    
     setMovie(response.data);
     
